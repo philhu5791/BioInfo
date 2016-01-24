@@ -7,7 +7,7 @@ public class Launcher {
 	public static void main(String[] args) {
 	
 		generetor = new FastaGenerator();
-		File folder = new File("./input");
+		File folder = new File("/Users/wwang/Documents/workspace/BioInfo/HLAfastaGenerator/input");
 		File[] inputList = folder.listFiles();
 		for(int i = 0 ; i < inputList.length; i++){
 			if(inputList[i].getName().contains("xml")){
