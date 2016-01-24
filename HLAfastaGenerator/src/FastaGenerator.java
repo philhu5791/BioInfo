@@ -146,7 +146,7 @@ public class FastaGenerator {
 		pr.println(ps);
 		pr.println(seq);}
 		
-		//connect multiple phase-sets by '-' indicates a gap}
+	//connect multiple phase-sets by '-' indicates a gap
 	private String getPs1(NodeList list){
 		if(list.getLength() == 2){
 			Element seq1 = (Element) list.item(0);
@@ -158,6 +158,8 @@ public class FastaGenerator {
 				if(temp.getAttribute("phase-set").equals("1")){
 					if(sb.length() > 0){
 						sb.append("-");
+						sb.append(temp.getElementsByTagName("sequence").item(0).getTextContent());
+					}else{
 						sb.append(temp.getElementsByTagName("sequence").item(0).getTextContent());
 					}
 					
@@ -178,6 +180,8 @@ public class FastaGenerator {
 				if(temp.getAttribute("phase-set").equals("2")){
 					if(sb.length() > 0){
 						sb.append("-");
+						sb.append(temp.getElementsByTagName("sequence").item(0).getTextContent());
+					}else{
 						sb.append(temp.getElementsByTagName("sequence").item(0).getTextContent());
 					}
 					

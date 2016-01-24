@@ -7,7 +7,7 @@ public class Launcher {
 	public static void main(String[] args) {
 	
 		generetor = new FastaGenerator();
-		File folder = new File("/Users/wwang/Documents/workspace/BioInfo/HLAfastaGenerator/input");
+		File folder = new File("./HLAfastaGenerator/input");
 		File[] inputList = folder.listFiles();
 		for(int i = 0 ; i < inputList.length; i++){
 			if(inputList[i].getName().contains("xml")){
@@ -22,7 +22,7 @@ public class Launcher {
 	}
 	
 	private static void process(File input, String outputName){
-		File output = new File("./output/" + outputName +".fasta");
+		File output = new File("./HLAfastaGenerator/output/" + outputName +".fasta");
 		try{
 			generetor.run(input,output);
 		}catch(Exception e){
