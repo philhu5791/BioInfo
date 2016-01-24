@@ -139,6 +139,9 @@ public class FastaGenerator {
 		printAttribute(haplod2,"type");
 	    printAttribute("gls", Gls.get(1));
 	    printSeq("PS2", getPs2(sequenceList));
+	    
+	  //print empty line as divider
+	    pr.println();
 
 	}
 	
